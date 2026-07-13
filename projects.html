@@ -17,8 +17,22 @@
             }
         }
     </script>
+    <style>
+        #cursor-follower {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 24px;
+            transition: transform 0.05s ease;
+        }
+    </style>
 </head>
 <body class="bg-chiikawaPink-50 text-slate-700 font-sans pt-20">
+
+    <!-- 마우스 포인터 따라다니는 이모지 -->
+    <div id="cursor-follower">🐦</div>
 
     <!-- 진행률 표시줄 -->
     <div class="fixed top-0 w-full h-1.5 bg-gray-200 z-[60]">
@@ -78,6 +92,12 @@
     </footer>
 
     <script>
+        // 마우스 추적 스크립트 - 마우스에 밀착되도록 조정
+        const cursor = document.getElementById('cursor-follower');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+        
         // 페이지별 고유 진행률 설정 (예: 소개 0, 프로젝트 25, 어그로 50, 좋아하는 것 75)
         const BASE_PROGRESS = 25; 
         
