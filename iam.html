@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I AM - 어그로 장인 백엔드 개발자</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://as99.github.io/pretendard/dist/web/static/pretendard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { chiikawaPink: { 50: '#FAF6F6', 100: '#FBF0F1', 300: '#EDB7C0', 500: '#D57383' } },
+                    fontFamily: { sans: ['Pretendard', 'sans-serif'], hand: ['Gamja Flower', 'cursive'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-chiikawaPink-50 text-slate-700 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/50 backdrop-blur-md px-6 py-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <span class="font-hand text-2xl text-chiikawaPink-500">I AM.</span>
+            <div class="space-x-6 text-sm font-bold text-slate-500">
+                <a href="#about" class="hover:text-chiikawaPink-500">소개</a>
+                <a href="#projects" class="hover:text-chiikawaPink-500">프로젝트</a>
+                <a href="#aggro" class="hover:text-chiikawaPink-500">어그로</a>
+                <a href="#hobbies" class="hover:text-chiikawaPink-500">좋아하는 것</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. 기본 정보 -->
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center py-20 px-6 text-center">
+        <h1 class="text-5xl lg:text-6xl font-black mb-12 leading-[4rem]">
+            안녕하세요<br>
+            <span class="text-chiikawaPink-500">어그로 장인</span><br>
+            백엔드 개발자 신예지입니다.
+        </h1>
+        <div class="flex flex-wrap justify-center gap-4 text-sm font-bold text-chiikawaPink-500">
+            <span class="bg-white px-6 py-2 rounded-full border border-chiikawaPink-200 shadow-sm">2001년생</span>
+            <span class="bg-white px-6 py-2 rounded-full border border-chiikawaPink-200 shadow-sm">ISTJ</span>
+            <span class="bg-white px-6 py-2 rounded-full border border-chiikawaPink-200 shadow-sm">SSAFY 16기 서울 14반</span>
+        </div>
+    </section>
+
+    <!-- 2. 프로젝트 -->
+    <section id="projects" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-black mb-8 text-slate-800">🛠️ 프로젝트</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- dapanda-backend -->
+                <div class="bg-chiikawaPink-50 p-6 rounded-3xl border border-chiikawaPink-100 flex flex-col">
+                    <img src="dapanda.png" alt="dapanda 프로젝트 이미지" class="w-full h-48 object-cover rounded-2xl mb-4 bg-chiikawaPink-100">
+                    <span class="bg-chiikawaPink-300 text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-3">Backend</span>
+                    <h3 class="font-bold text-xl mb-2">dapanda: 데이터 거래 플랫폼</h3>
+                    <p class="text-slate-600 text-sm mb-4 flex-grow">유레카 최종 융합 프로젝트</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">모니터링</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">결제 동시성</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">인프라 장애 복구</span>
+                    </div>
+                    <a href="https://github.com/yereumi/dapanda-backend" target="_blank" class="text-chiikawaPink-500 font-bold text-sm hover:underline">GitHub →</a>
+                </div>
+                <!-- ixi-U-be -->
+                <div class="bg-chiikawaPink-50 p-6 rounded-3xl border border-chiikawaPink-100 flex flex-col">
+                    <img src="ixiu.jpg" alt="ixi-U-be 프로젝트 이미지" class="w-full h-48 object-cover rounded-2xl mb-4 bg-chiikawaPink-100">
+                    <span class="bg-chiikawaPink-300 text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-3">Backend</span>
+                    <h3 class="font-bold text-xl mb-2">ixi-U: 통신 요금제 추천 챗봇</h3>
+                    <p class="text-slate-600 text-sm mb-4 flex-grow">유레카 백엔드 종합 프로젝트 최우수상</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">금칙어 필터링</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">Graph DB 설계</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">Redis 캐싱</span>
+                   </div>
+                    <a href="https://github.com/yereumi/ixi-U-be" target="_blank" class="text-chiikawaPink-500 font-bold text-sm hover:underline">GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 어그로 장인 -->
+    <section id="aggro" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-black mb-8 text-slate-800">🔥 어그로 장인</h2>
+            <img src="velog.png" alt="벨로그 통계" class="w-full rounded-3xl shadow-lg mb-6 border border-chiikawaPink-100">
+            <p class="text-slate-600 italic">기술 블로그를 통해 기록과 소통하는 것을 즐깁니다.</p>
+        </div>
+    </section>
+
+    <!-- 4. 좋아하는 것 -->
+    <section id="hobbies" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-black mb-8 text-slate-800">💖 좋아하는 것</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-chiikawaPink-50 p-6 rounded-3xl border border-chiikawaPink-100">
+                    <img src="lgtwins.png" alt="야구" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4 bg-chiikawaPink-100">
+                    <h3 class="font-bold text-xl mb-2">⚾ 야구 (LG 트윈스)</h3>
+                    <p class="text-sm text-slate-600">암흑기 시절부터 봐온 야구, 드디어 보상받는 중</p>
+                </div>
+                <div class="bg-chiikawaPink-50 p-6 rounded-3xl border border-chiikawaPink-100">
+                    <img src="aki.jpg" alt="애니" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4 bg-chiikawaPink-100">
+                    <h3 class="font-bold text-xl mb-2">🎬 애니메이션</h3>
+                    <p class="text-sm text-slate-600">치이카와, 강철의 연금술사, 진격의 거인, 기생수, 체인소맨, 도쿄구울 등</p>
+                </div>
+                <div class="bg-chiikawaPink-50 p-6 rounded-3xl border border-chiikawaPink-100">
+                    <img src="sparrow.jpg" alt="동물" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4 bg-chiikawaPink-100">
+                    <h3 class="font-bold text-xl mb-2">🐦 동물</h3>
+                    <p class="text-sm text-slate-600">참새, 오목눈이, 까치, 햄스터 등 작고 소중한 생명들</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-400 text-xs">
+        © 2026. SSAFY 16기 서울 14반 신예지.
+    </footer>
+</body>
+</html>
