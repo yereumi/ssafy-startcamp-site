@@ -20,6 +20,11 @@
 </head>
 <body class="bg-chiikawaPink-50 text-slate-700 font-sans pt-20">
 
+    <!-- 진행률 표시줄 -->
+    <div class="fixed top-0 w-full h-1.5 bg-gray-200 z-[60]">
+        <div id="progressBar" class="h-full bg-chiikawaPink-500 w-0 transition-all duration-75"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-white/50 backdrop-blur-md px-6 py-4">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
@@ -45,5 +50,23 @@
     <footer class="py-10 text-center text-slate-400 text-xs">
         © 2026. SSAFY 16기 서울 14반 신예지.
     </footer>
+
+    <script>
+        // 페이지별 고유 진행률 설정 (예: 소개 0, 프로젝트 25, 어그로 50, 좋아하는 것 75)
+        const BASE_PROGRESS = 50; 
+        
+        // 페이지 로드 시 즉시 설정
+        window.onload = function() {
+            document.getElementById("progressBar").style.width = BASE_PROGRESS + "%";
+        };
+
+        // 스크롤 시 추가 계산
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 25; 
+            document.getElementById("progressBar").style.width = (BASE_PROGRESS + scrolled) + "%";
+        };
+    </script>
 </body>
 </html>
