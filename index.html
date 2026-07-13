@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I AM - 어그로 장인 백엔드 개발자</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://as99.github.io/pretendard/dist/web/static/pretendard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { chiikawaPink: { 50: '#FAF6F6', 100: '#FBF0F1', 300: '#EDB7C0', 500: '#D57383' } },
+                    fontFamily: { sans: ['Pretendard', 'sans-serif'], hand: ['Gamja Flower', 'cursive'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-chiikawaPink-50 text-slate-700 font-sans pt-20">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/50 backdrop-blur-md px-6 py-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <span class="font-hand text-2xl text-chiikawaPink-500">I AM.</span>
+            <div class="space-x-6 text-sm font-bold text-slate-500">
+                <a href="index.html" class="text-chiikawaPink-500">소개</a>
+                <a href="projects.html" class="hover:text-chiikawaPink-500">프로젝트</a>
+                <a href="aggro.html" class="hover:text-chiikawaPink-500">어그로</a>
+                <a href="hobbies.html" class="hover:text-chiikawaPink-500">좋아하는 것</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. 기본 정보 -->
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center py-20 px-6 text-center">
+        <h1 class="text-5xl lg:text-6xl font-black mb-12 leading-[4rem]">
+            안녕하세요<br>
+            <span class="text-chiikawaPink-500">어그로 장인</span><br>
+            백엔드 개발자 신예지입니다.
+        </h1>
+        <div class="flex flex-wrap justify-center gap-4 text-sm font-bold text-chiikawaPink-500">
+            <span class="bg-white px-6 py-2 rounded-full border border-chiikawaPink-200 shadow-sm">2001년생</span>
+            <span class="bg-white px-6 py-2 rounded-full border border-chiikawaPink-200 shadow-sm">ISTJ</span>
+            <span class="bg-white px-6 py-2 rounded-full border border-chiikawaPink-200 shadow-sm">SSAFY 16기 서울 14반</span>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-400 text-xs">
+        © 2026. SSAFY 16기 서울 14반 신예지.
+    </footer>
+</body>
+</html>

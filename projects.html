@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 - 어그로 장인 백엔드 개발자</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://as99.github.io/pretendard/dist/web/static/pretendard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { chiikawaPink: { 50: '#FAF6F6', 100: '#FBF0F1', 300: '#EDB7C0', 500: '#D57383' } },
+                    fontFamily: { sans: ['Pretendard', 'sans-serif'], hand: ['Gamja Flower', 'cursive'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-chiikawaPink-50 text-slate-700 font-sans pt-20">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/50 backdrop-blur-md px-6 py-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <span class="font-hand text-2xl text-chiikawaPink-500">I AM.</span>
+            <div class="space-x-6 text-sm font-bold text-slate-500">
+                <a href="index.html" class="hover:text-chiikawaPink-500">소개</a>
+                <a href="projects.html" class="text-chiikawaPink-500">프로젝트</a>
+                <a href="aggro.html" class="hover:text-chiikawaPink-500">어그로</a>
+                <a href="hobbies.html" class="hover:text-chiikawaPink-500">좋아하는 것</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. 프로젝트 -->
+    <section id="projects" class="py-20 px-6 bg-white min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-black mb-8 text-slate-800">🛠️ 프로젝트</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- dapanda-backend -->
+                <div class="bg-chiikawaPink-50 p-6 rounded-3xl border border-chiikawaPink-100 flex flex-col">
+                    <img src="dapanda.png" alt="dapanda 프로젝트 이미지" class="w-full h-48 object-cover rounded-2xl mb-4 bg-chiikawaPink-100">
+                    <span class="bg-chiikawaPink-300 text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-3">Backend</span>
+                    <h3 class="font-bold text-xl mb-2">dapanda: 데이터 거래 플랫폼</h3>
+                    <p class="text-slate-600 text-sm mb-4 flex-grow">유레카 최종 융합 프로젝트</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">모니터링</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">결제 동시성</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">인프라 장애 복구</span>
+                    </div>
+                    <a href="https://github.com/yereumi/dapanda-backend" target="_blank" class="text-chiikawaPink-500 font-bold text-sm hover:underline">GitHub →</a>
+                </div>
+                <!-- ixi-U-be -->
+                <div class="bg-chiikawaPink-50 p-6 rounded-3xl border border-chiikawaPink-100 flex flex-col">
+                    <img src="ixiu.jpg" alt="ixi-U-be 프로젝트 이미지" class="w-full h-48 object-cover rounded-2xl mb-4 bg-chiikawaPink-100">
+                    <span class="bg-chiikawaPink-300 text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-3">Backend</span>
+                    <h3 class="font-bold text-xl mb-2">ixi-U: 통신 요금제 추천 챗봇</h3>
+                    <p class="text-slate-600 text-sm mb-4 flex-grow">유레카 백엔드 종합 프로젝트 최우수상</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">금칙어 필터링</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">Graph DB 설계</span>
+                        <span class="bg-white px-4 py-1.5 rounded-full border border-chiikawaPink-200 shadow-sm text-xs font-bold text-chiikawaPink-500">Redis 캐싱</span>
+                    </div>
+                    <a href="https://github.com/yereumi/ixi-U-be" target="_blank" class="text-chiikawaPink-500 font-bold text-sm hover:underline">GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-400 text-xs">
+        © 2026. SSAFY 16기 서울 14반 신예지.
+    </footer>
+</body>
+</html>
